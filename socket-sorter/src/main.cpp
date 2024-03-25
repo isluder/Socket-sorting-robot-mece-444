@@ -26,6 +26,4 @@ void loop() {
   else{
     Serial.println("No Metal");
   }
-
 }
-

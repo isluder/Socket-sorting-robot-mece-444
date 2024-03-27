@@ -1,5 +1,4 @@
 #include <Arduino.h>
-// #include "myColorSensor.h"
 // #include "myMotorControl.h"
 // #include "myScaleSensor.h"
 #include "myLimitSwitch/myLimitSwitch.h"

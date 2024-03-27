@@ -1,18 +1,17 @@
 #include <Arduino.h>
-#include "myConfig.h"
 // #include "myColorSensor.h"
 // #include "myMotorControl.h"
 // #include "myScaleSensor.h"
-#include "myLimitSwitch.h"
+#include "myLimitSwitch/myLimitSwitch.h"
+#include "myConfig.h"
 
 
 //LIMIT SWITCHES
-bool read_average_motor_limit_pin();
 bool switch_detected_bool;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(motor_limit_switch_1, INPUT);
+  pinMode(motor_limit_switch_1, INPUT_PULLUP);
 }
 
 void loop() {
@@ -21,9 +20,9 @@ void loop() {
 
 
   if (switch_detected_bool == true){
-    Serial.println("Sensing Metal");
+    Serial.println("Sensing Metal");  //Replace with Action
   }
   else{
-    Serial.println("No Metal");
+    Serial.println("No Metal");       //Replace with Action
   }
 }

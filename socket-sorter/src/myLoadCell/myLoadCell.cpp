@@ -4,7 +4,7 @@
 
 bool IS_LOAD_CELL_SET_UP = false;
 HX711 scale;
-int const average_read = 100;
+int const average_read = 10;
 
 void set_up_load_cell()
 {

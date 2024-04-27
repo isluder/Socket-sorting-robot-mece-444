@@ -1,6 +1,9 @@
 #pragma once
 
-#define motor_limit_switch_1 52  //Digital Pin to Motor Limit Switch
-// int motor_limit_switch_2 = 51;  //Digital Pin to Motor Limit Switch
-// int motor_limit_switch_3 = 50;  //Digital Pin to Motor Limit Switch
-#define motor_limit_samples 1000
+//Digital Pin to Motor Limit Switch
+#define motor_limit_switch_1 23
+
+// HX711 circuit wiring
+#define LOADCELL_DOUT_PIN 24
+#define LOADCELL_SCK_PIN 25
+

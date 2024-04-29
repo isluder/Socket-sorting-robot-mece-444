@@ -4,7 +4,7 @@
 
 bool IS_LOAD_CELL_SET_UP = false;
 HX711 scale;
-int const average_read = 10;
+int const average_read = 3;
 
 void set_up_load_cell()
 {
@@ -28,8 +28,12 @@ float get_weight()
         IS_LOAD_CELL_SET_UP = true;
     }
 
-    double reading = scale.get_units(average_read);
-    return mymap(reading, 0.00, 101700.00, 0.00, 141.00);
+    double reading = -scale.get_units(average_read);
+
+    return mymap(reading, 300.00, 97700.00, 0.00, 141.00);
+    // ;
+
+    // mymap(reading, 1000.00, 101700.00, 0.00, 141.00);
 }
 
 // #include <Arduino.h>

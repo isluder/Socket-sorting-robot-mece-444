@@ -13,13 +13,14 @@ void home_axis(){
         set_up_serial();
     }
     if(Serial1.available()){
-        Serial1.write('G1 Z 20');
+        Serial1.println();
+        Serial1.println('G1 Z 20');
         delay(1000);
-        Serial1.write('G28 X Y');
+        Serial1.println('G28 X Y');
         delay(5000);
-        Serial1.write('G1 X 150 Y 200');
+        Serial1.println('G1 X 150 Y 200');
         delay(2500);
-        Serial1.write('G28 Z');
+        Serial1.println('G28 Z');
     }
 }
 
